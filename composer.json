@@ -1,0 +1,18 @@
+{
+    "name": "msansone/my-stock-php",
+    "description": "Controle de Ações",
+    "type": "project",
+    "license": "MTI",
+    "autoload": {
+        "psr-4": {
+            "Msansone\\MyStockPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "marcio sansone",
+            "email": "msansone@gmail.com"
+        }
+    ],
+    "require": {}
+}
