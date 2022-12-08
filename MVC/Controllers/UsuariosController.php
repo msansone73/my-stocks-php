@@ -12,6 +12,8 @@ class UsuariosController{
         $u = new Usuario();
         $nome = $u->findById(1);
 
+        $all_usuarios = $u-> getAll();
+
         $view = 'usuarios';
         require_once(__DIR__.'/../Views/template.php');
 
