@@ -1,93 +1,31 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="https://bulma.io">
-      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-    </a>
-
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item" href="/">
-        Home
-      </a>
-
-      <a class="navbar-item" href="/stocks">
-        Ações
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More
-        </a>
-
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            About
-          </a>
-          <a class="navbar-item">
-            Jobs
-          </a>
-          <a class="navbar-item">
-            Contact
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            Report an issue
-          </a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">MyControl</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/stocks">Stock</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Admin
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="/usuarios">Usuarios</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-      </div>
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          Admin
-        </a>
-
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="/usuarios">
-            Usuarios
-          </a>
-          <a class="navbar-item">
-            Jobs
-          </a>
-          <a class="navbar-item">
-            Contact
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            Report an issue
-          </a>
+        <div class="d-flex d-none d-lg-block">
+            Usuario: <?= $_SESSION["USUARIO"]["name"] ?>
         </div>
-      </div>
-      <a class="navbar-item" href="/logout">
-        Logout
-      </a>
     </div>
-  </div>
-
-
-
-  <div class="navbar-end">
-      <?php if (1==1): ?>
-        <div class="navbar-item">
-          Usuarios <?= $_SESSION["USUARIO"]["name"]?>
-        </div>
-      <?php else: ?>
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-primary">
-              <strong>Sign upxxx</strong>
-            </a>
-            <a class="button is-light">
-              Log in
-            </a>
-          </div>
-        </div>
-      <?php endif ?>  
-    </div>
-  </div>
 </nav>

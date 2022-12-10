@@ -18,7 +18,8 @@ if(isset($_POST['email']) )
     echo 'senha errada';
   } else {
     $_SESSION["USUARIO"]=$res[0];
-    header('Location: /');
+    flush();
+    echo "<script>  location.href = 'https://msansone.net' </script>";
     die();
   }
 
